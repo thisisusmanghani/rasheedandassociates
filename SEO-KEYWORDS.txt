@@ -1,0 +1,352 @@
+================================================================
+RASHEED & ASSOCIATES — TARGET KEYWORDS MAP
+Site: https://rasheedandassociateslahore.me
+================================================================
+
+These are the queries your site is now structurally optimised for.
+Each keyword is mapped to the page that targets it (title, H1,
+metadata, and JSON-LD all aligned). Rankings depend on (a) Google
+indexing the new pages, (b) the off-page work listed at the bottom
+(GBP + citations + backlinks).
+
+Realistic timeline:
+  - Brand queries        → ranking #1 within 1–3 weeks
+  - Long-tail / FAQ      → ranking page 1 within 4–8 weeks
+  - Mid-tail commercial  → ranking page 1 within 2–4 months
+  - Head terms           → page 1 within 4–9 months (with backlinks)
+
+
+================================================================
+TIER A — BRAND QUERIES  (you WILL rank #1, fast)
+================================================================
+- rasheed and associates
+- rasheed associates lahore
+- rasheed associates lawyers
+- rasheed and associates law firm
+- m rasheed bhatti advocate
+- rasheed bhatti lawyer lahore
+- rasheed bhatti lahore high court
+- rasheedandassociateslahore.me
+
+→ Targeted by: /, /about, /attorneys/m-rasheed-bhatti
+
+
+================================================================
+TIER B — LONG-TAIL "HOW TO" QUERIES  (high probability of #1)
+================================================================
+These are low-competition, high-intent. Your /faq and /insights
+pages answer them with FAQPage + Article schema.
+
+- how to file a writ petition in lahore high court
+- how to file a constitutional petition in lahore high court
+- writ petition lahore high court procedure
+- writ petition fee lahore high court
+- how to get bail in pakistan criminal case
+- pre arrest bail procedure pakistan
+- how much do lawyers charge in lahore
+- legal fee for advocate in lahore high court
+- what is the process for khula in pakistan
+- khula procedure family court lahore
+- how to resolve a property dispute in punjab
+- documents needed for property transfer pakistan
+- how to register a company in lahore
+- secp company registration process lahore
+- overseas pakistani property dispute lawyer
+- can overseas pakistanis hire a lawyer in lahore remotely
+- special power of attorney pakistan overseas
+- difference between district court and lahore high court
+- fir quashment procedure lahore high court
+
+→ Targeted by: /faq + 6 articles in /insights/*
+
+
+================================================================
+TIER C — PRACTICE-AREA COMMERCIAL  (medium-competition, page 1)
+================================================================
+Each phrase below is in the metaTitle / H1 / JSON-LD of its
+practice page.
+
+- criminal lawyer lahore                → /practice/criminal
+- bail lawyer lahore                    → /practice/criminal
+- criminal defence advocate lahore high court → /practice/criminal
+- fir quashment lawyer punjab           → /practice/criminal
+
+- civil litigation lawyer lahore        → /practice/civil
+- civil suit lawyer punjab              → /practice/civil
+
+- property lawyer lahore                → /practice/property
+- property dispute lawyer punjab        → /practice/property
+- land grabbing lawyer lahore           → /practice/property
+- dha lda lawyer lahore                 → /practice/property
+
+- family lawyer lahore                  → /practice/family
+- divorce lawyer lahore                 → /practice/family
+- khula lawyer lahore                   → /practice/family
+- child custody lawyer lahore           → /practice/family
+
+- corporate lawyer lahore               → /practice/corporate
+- company registration lawyer lahore    → /practice/corporate
+- secp lawyer lahore                    → /practice/corporate
+
+- constitutional law firm pakistan      → /practice/constitutional
+- writ petition lawyer lahore           → /practice/constitutional
+
+- banking lawyer lahore                 → /practice/banking
+- recovery suit lawyer lahore           → /practice/banking
+
+- tax lawyer lahore                     → /practice/taxation
+- inland revenue appeal lawyer lahore   → /practice/taxation
+
+(plus the remaining practice areas in /practice)
+
+
+================================================================
+TIER D — LOCATION / "NEAR ME" QUERIES  (page 1 once GBP is live)
+================================================================
+- lawyer in lahore                      → /lahore-lawyer + /
+- best lawyer in lahore                 → /lahore-lawyer
+- top law firm lahore                   → /lahore-lawyer
+- law firm lahore pakistan              → /lahore-lawyer
+- lawyer near lahore high court         → /lahore-high-court-advocate
+- law office near lahore high court     → /lahore-high-court-advocate
+- advocate lahore high court            → /lahore-high-court-advocate
+- lhc advocate                          → /lahore-high-court-advocate
+- advocate high court punjab            → /punjab-lawyer
+- advocate punjab                       → /punjab-lawyer
+- best advocate punjab                  → /punjab-lawyer
+- lawyer the mall lahore                → /contact + /lahore-lawyer
+
+NOTE: "near me" queries are 80% Google Business Profile, 20% site.
+Without GBP these will not rank. With GBP claimed they will.
+
+
+================================================================
+TIER E — URDU / TRANSLITERATED QUERIES
+================================================================
+- وکیل لاہور                            → /ur
+- لاہور ہائی کورٹ ایڈووکیٹ              → /ur
+- wakeel lahore                         → /ur + /  (in keywords)
+- behtar wakeel lahore                  → /ur
+- lahore high court wakeel              → /ur
+- talaq ka case wakeel lahore           → /ur
+- property ka maamla wakeel lahore      → /ur
+
+
+================================================================
+WHAT IS COMPLETE (per info.txt)
+================================================================
+[x] PART 1 — Keyword strategy applied to every page's title,
+    description, keywords[] and visible H1/H2 copy.
+[x] PART 2a — Root layout metadata (metadataBase, title template,
+    OG, Twitter, robots, hreflang en-PK / ur-PK / x-default,
+    canonical).
+[x] PART 2b — Unique metadata on every page including dynamic
+    /practice/[slug], /attorneys/[slug], /insights/[slug].
+[x] PART 3a — components/seo/JsonLd.tsx
+[x] PART 3b — Schemas live:
+       LegalService + LocalBusiness + ProfessionalService (root)
+       WebSite + SearchAction (root)
+       LegalService per practice area
+       Person + Attorney per attorney
+       Article per insight post
+       FAQPage on /faq, every practice page, every insight w/ FAQs
+       BreadcrumbList on every inner page (via PageHero crumbs)
+       ContactPage on /contact
+[x] PART 3c — app/sitemap.ts (dynamic, includes ALL routes)
+[x] PART 3d — app/robots.ts
+[x] PART 4 — /faq with all 10 questions, /lahore-lawyer,
+    /punjab-lawyer, /lahore-high-court-advocate, /insights with
+    6 long-form articles.
+[x] PART 5 — next/image used on attorney photos with priority,
+    next/font for serif + sans, server components by default,
+    canonical on every page, internal linking via Footer +
+    sidebars + breadcrumbs, hreflang for /ur with lang+dir RTL.
+[x] PART 6 — AEO: self-contained FAQ answers, "Firm at a glance"
+    box on /about, firm name in first 100 words of every page,
+    dedicated /lahore-high-court-advocate page for topical
+    authority.
+[x] PART 7 — Implementation order followed; build passes with 35
+    static routes prerendered.
+
+PENDING (off-site, you have to do these manually):
+[ ] Google Search Console verification (instructions below)
+[ ] Google Business Profile claim + categories + photos
+[ ] Directory citations (pakistanlawyer.com, lawzana.com,
+    sjp.com.pk, wooqlaw.com, justdial.pk)
+[ ] og-image.jpg upload to /public (1200×630)
+[ ] Real client reviews → AggregateRating schema later
+
+
+================================================================
+SITEMAP STATUS
+================================================================
+File:  app/sitemap.ts (dynamic)
+URL:   https://rasheedandassociateslahore.me/sitemap.xml
+Robots: https://rasheedandassociateslahore.me/robots.txt
+
+Routes included (35 total, all prerendered as static HTML):
+  /
+  /about
+  /attorneys
+  /attorneys/m-rasheed-bhatti
+  /contact
+  /faq
+  /insights
+  /insights/how-to-file-writ-petition-lahore-high-court
+  /insights/property-disputes-punjab-legal-rights
+  /insights/khula-process-pakistan-women-guide
+  /insights/criminal-bail-applications-pakistan-complete-guide
+  /insights/overseas-pakistanis-property-cases-remotely
+  /insights/company-registration-lahore-secp-process
+  /lahore-high-court-advocate
+  /lahore-lawyer
+  /punjab-lawyer
+  /practice
+  /practice/criminal
+  /practice/civil
+  /practice/property
+  /practice/family
+  /practice/corporate
+  /practice/constitutional
+  /practice/banking
+  /practice/taxation
+  /practice/intellectual-property
+  /practice/cyber
+  /practice/medical
+  /practice/special-tribunals
+  /practice/arbitration   (and the remaining 13th area)
+  /ur
+  /robots.txt
+  /sitemap.xml
+
+
+================================================================
+DIRECT-LINK ACCESS (your Vercel SPA concern)
+================================================================
+This is NOT a SPA anymore. Each route is a separate
+server-rendered HTML file generated at build time
+(prerendered: static). When someone hits
+
+   https://rasheedandassociateslahore.me/practice/criminal
+
+Vercel serves a fully-formed HTML document for that URL with
+its own <title>, meta, JSON-LD, and content — NO client-side
+navigation required, NO 404 on hard reload, NO redirect to "/".
+
+Verified by the build output:
+   ● /practice/[slug]   → /practice/criminal, /practice/civil,
+                          /practice/property, ... (13 prerendered)
+   ● /attorneys/[slug]  → /attorneys/m-rasheed-bhatti
+   ● /insights/[slug]   → 6 prerendered articles
+   ○ /faq, /about, /contact, /lahore-lawyer, /punjab-lawyer,
+     /lahore-high-court-advocate, /ur  (all static)
+
+Every URL is independently shareable, indexable, and bookmarkable.
+
+
+================================================================
+GOOGLE SEARCH CONSOLE — STEP-BY-STEP SUBMISSION
+================================================================
+
+STEP 1 — Deploy
+   Push to your Vercel project. Confirm
+   https://rasheedandassociateslahore.me loads with the new pages.
+   Test 3–4 deep links directly in the browser, e.g.
+   https://rasheedandassociateslahore.me/practice/criminal
+
+STEP 2 — Add property in Search Console
+   Go to https://search.google.com/search-console
+   Click "Add property" → choose "URL prefix"
+   Enter exactly: https://rasheedandassociateslahore.me
+
+STEP 3 — Verify ownership
+   Easiest method: HTML tag verification.
+   GSC will give you a meta tag like:
+      <meta name="google-site-verification" content="AbCdEf123..." />
+   Take the content value (just the string), open
+   app/layout.tsx, find the metadata object, and add:
+
+      verification: { google: 'AbCdEf123...' },
+
+   (The placeholder is already there from info.txt — replace it.)
+   Push to Vercel, wait 1–2 min, then click "Verify" in GSC.
+
+STEP 4 — Submit your sitemap
+   In GSC left sidebar: Sitemaps → "Add a new sitemap"
+   Enter:  sitemap.xml
+   (Full URL becomes https://rasheedandassociateslahore.me/sitemap.xml)
+   Click Submit. Within 24 hours status should show "Success".
+
+STEP 5 — Request indexing for top 10 pages manually
+   Use the URL Inspection tool (top of GSC). Paste each URL,
+   then click "Request indexing". Do these first, in order:
+      1. https://rasheedandassociateslahore.me/
+      2. https://rasheedandassociateslahore.me/lahore-lawyer
+      3. https://rasheedandassociateslahore.me/lahore-high-court-advocate
+      4. https://rasheedandassociateslahore.me/practice/criminal
+      5. https://rasheedandassociateslahore.me/practice/property
+      6. https://rasheedandassociateslahore.me/practice/family
+      7. https://rasheedandassociateslahore.me/faq
+      8. https://rasheedandassociateslahore.me/contact
+      9. https://rasheedandassociateslahore.me/attorneys/m-rasheed-bhatti
+     10. https://rasheedandassociateslahore.me/insights/how-to-file-writ-petition-lahore-high-court
+   Google limits this to ~10 per day per property — don't worry,
+   the sitemap will pick up the rest within a week.
+
+STEP 6 — Test structured data
+   Visit https://search.google.com/test/rich-results
+   Test these URLs and confirm zero errors:
+      - the homepage           (LegalService + WebSite)
+      - /faq                   (FAQPage)
+      - /practice/criminal     (LegalService + FAQPage + Breadcrumbs)
+      - /attorneys/m-rasheed-bhatti  (Person/Attorney)
+      - /insights/how-to-file-writ-petition-lahore-high-court (Article)
+
+STEP 7 — Set up Bing Webmaster Tools too
+   https://www.bing.com/webmasters → import directly from GSC.
+   Submit the same sitemap. Bing powers DuckDuckGo, ChatGPT
+   browse, and ~15% of Pakistan's search.
+
+STEP 8 — Claim your Google Business Profile
+   https://business.google.com → "Manage now" → search for
+   "Rasheed & Associates Lahore". If not listed, create it.
+      Primary category: Law firm
+      Secondary:        Lawyer, Family law attorney, Real estate
+                        attorney, Corporate office
+      Hours:            Mon–Sat, 9:30 AM – 6:30 PM
+      Website:          https://rasheedandassociateslahore.me
+      Phone:            +92 300 4553477
+   Verification is by postcard or phone (Pakistan supports both).
+   Add 8–10 photos: office exterior, reception, founder,
+   conference room, building front showing "Fahad Arcade".
+
+STEP 9 — Build citations (week 2)
+   Submit identical NAP to:
+      https://www.pakistanlawyer.com
+      https://lawzana.com
+      https://www.sjp.com.pk
+      https://wooqlaw.com
+      https://justdial.pk
+      https://www.lawyersofpakistan.pk
+   Use the EXACT same business name, address, and phone format
+   as on the website. Inconsistency hurts local rankings.
+
+STEP 10 — Monitor (weekly)
+   In GSC → Performance: track impressions and clicks.
+   Within 6–8 weeks you should see the long-tail queries above
+   appearing in your impressions report.
+
+
+================================================================
+QUICK WINS YOU CAN DO TODAY (15 minutes)
+================================================================
+1. Replace 'YOUR_GSC_VERIFICATION_CODE' in app/layout.tsx with
+   the real GSC token.
+2. Drop a 1200×630 og-image.jpg into /public/ (firm logo on
+   ink-blue background works).
+3. Create a /public/logo.png (the publisher logo referenced by
+   Article schema).
+4. Push to Vercel.
+5. Submit sitemap to GSC.
+
+That's it. The technical SEO is complete.

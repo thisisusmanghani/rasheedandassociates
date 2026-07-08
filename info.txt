@@ -1,0 +1,248 @@
+You are a senior Next.js developer and SEO specialist. The website rasheedandassociateslahore.me is already built. Your task is to implement an exhaustive, production-grade SEO strategy so it ranks #1 on Google Pakistan for every way a person in Lahore or Punjab might search for a lawyer or law firm.
+
+## Context
+- Domain: rasheedandassociateslahore.me
+- Framework: Next.js (App Router, TypeScript)
+- Location: Lahore, Punjab, Pakistan — practicing at Lahore High Court
+- Target audience: Individuals and businesses with legal issues in Lahore, Punjab, and Overseas Pakistanis
+- Competition: pakistanlawyer.com, lawzana.com, wooqlaw.com, lawyersofpakistan.pk
+
+---
+
+## PART 1 — KEYWORD STRATEGY (implement via page content & metadata)
+
+### Tier 1 — High-intent commercial keywords (homepage + practice pages)
+Primary English:
+- lawyer in Lahore | best lawyer in Lahore | top law firm Lahore
+- advocate Lahore High Court | LHC advocate | advocate high court Punjab
+- law firm Lahore Pakistan | legal services Lahore | legal consultancy Lahore
+- Rasheed and Associates | Rasheed Associates lawyers
+
+Practice-area English:
+- property lawyer Lahore | property dispute lawyer Punjab
+- family lawyer Lahore | divorce lawyer Lahore | khula lawyer Lahore
+- criminal lawyer Lahore | bail lawyer Lahore
+- corporate lawyer Lahore | company registration lawyer Lahore
+- civil litigation lawyer Punjab | writ petition Lahore High Court
+- constitutional law firm Pakistan | banking lawyer Lahore
+
+### Tier 2 — Urdu transliterated searches (critical for Pakistan traffic)
+Create Urdu-language content OR add these to metadata as hidden signals:
+- wakeel Lahore | behtar wakeel Lahore | Lahore ka barhya wakeel
+- property ka maamla wakeel Lahore | talaq ka case wakeel
+- Lahore High Court wakeel | bail application wakeel Lahore
+- zabardasti ke khilaf wakeel | family court wakeel Lahore
+
+### Tier 3 — Long-tail & question queries (FAQ pages and blog)
+- how to file a writ petition in Lahore High Court
+- how to hire a lawyer in Lahore Pakistan
+- best law firm for property dispute in Punjab
+- what is the process for khula in Pakistan
+- how to get bail in Pakistan criminal case
+- overseas Pakistani property dispute lawyer
+- corporate company registration lawyer Lahore
+- legal fee for advocate in Lahore High Court
+- is there a free legal consultation in Lahore
+- top rated law firm Lahore reviews
+
+### Tier 4 — Near-me & local intent (Google Maps / GBP signals)
+- lawyer near me Lahore | advocate near me Punjab
+- law office near Lahore High Court
+- legal aid Lahore | legal help Lahore
+- lawyer in Model Town Lahore | Gulberg lawyer Lahore
+
+---
+
+## PART 2 — NEXT.JS METADATA IMPLEMENTATION
+
+### 2a. Root layout metadata (app/layout.tsx)
+Add a comprehensive default metadata object:
+```ts
+export const metadata: Metadata = {
+  metadataBase: new URL('https://rasheedandassociateslahore.me'),
+  title: {
+    default: 'Rasheed & Associates | Best Law Firm in Lahore | Lahore High Court Advocates',
+    template: '%s | Rasheed & Associates Lawyers Lahore',
+  },
+  description: 'Rasheed & Associates is a top-rated law firm in Lahore, Pakistan, practicing at Lahore High Court. Expert advocates for property, family, criminal, corporate, and constitutional law in Punjab.',
+  keywords: [
+    'lawyer in Lahore', 'law firm Lahore', 'advocate Lahore High Court',
+    'property lawyer Lahore', 'family lawyer Lahore', 'criminal lawyer Lahore',
+    'corporate lawyer Pakistan', 'best advocate Punjab', 'LHC advocate Pakistan',
+    'wakeel Lahore', 'Lahore ka wakeel', 'Rasheed Associates lawyers'
+  ],
+  authors: [{ name: 'Rasheed & Associates', url: 'https://rasheedandassociateslahore.me' }],
+  creator: 'Rasheed & Associates',
+  publisher: 'Rasheed & Associates',
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
+  openGraph: {
+    type: 'website',
+    locale: 'en_PK',
+    alternateLocale: 'ur_PK',
+    url: 'https://rasheedandassociateslahore.me',
+    siteName: 'Rasheed & Associates Law Firm Lahore',
+    title: 'Best Law Firm in Lahore | Rasheed & Associates | Lahore High Court',
+    description: 'Award-winning advocates at Lahore High Court. Property, family, criminal, and corporate law in Punjab. Book a free consultation today.',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Rasheed & Associates Law Firm Lahore High Court' }],
+  },
+  twitter: { card: 'summary_large_image', title: 'Rasheed & Associates | Lahore Law Firm', description: 'Expert advocates at Lahore High Court. Property, family, criminal & corporate law.' },
+  alternates: { canonical: 'https://rasheedandassociateslahore.me', languages: { 'en-PK': 'https://rasheedandassociateslahore.me', 'ur': 'https://rasheedandassociateslahore.me/ur' } },
+  verification: { google: 'YOUR_GSC_VERIFICATION_CODE' },
+}
+```
+
+### 2b. Per-page metadata (each practice area page)
+Generate unique metadata for EVERY page. Example for /practice-areas/property-law:
+```ts
+export const metadata: Metadata = {
+  title: 'Property Lawyer Lahore | Property Dispute Advocate Punjab',
+  description: 'Rasheed & Associates provides expert property law services in Lahore. Our advocates handle title disputes, land grabbing, DHA/LDA cases, and property transfers at Lahore High Court.',
+  alternates: { canonical: 'https://rasheedandassociateslahore.me/practice-areas/property-law' },
+}
+```
+Do this for EVERY page: /about, /attorneys, /contact, /cases, /practice-areas/[each area], /attorneys/[each slug]
+
+---
+
+## PART 3 — JSON-LD STRUCTURED DATA
+
+### 3a. Create /components/seo/JsonLd.tsx
+A reusable component that injects JSON-LD via Next.js Script tag.
+
+### 3b. Implement these schemas:
+
+**LegalService (homepage)** — firm-level entity with address, phone, geo, openingHours, areaServed (Lahore, Punjab, Pakistan), priceRange
+
+**Attorney (each attorney page)** — name, jobTitle, worksFor (the firm), alumniOf, memberOf (Punjab Bar Council, Pakistan Bar Council), knowsAbout[]
+
+**FAQPage** — inject on every practice area page and the FAQ blog posts. Use the Tier 3 keyword questions as the FAQ questions with detailed answers.
+
+**BreadcrumbList** — on every nested page (/practice-areas/property-law should show Home > Practice Areas > Property Law)
+
+**LocalBusiness** — identical to LegalService but include hasMap (Google Maps URL), telephone, address (use the actual Lahore office address)
+
+**WebSite with SearchAction** — to enable Google's sitelinks search box
+
+**Review/AggregateRating** — only add if you have real client reviews with authentic star ratings
+
+### 3c. Create /app/sitemap.ts (Next.js dynamic sitemap)
+Generate all static + dynamic routes including /attorneys/[slug] and /cases/[slug]. Include changeFrequency and priority:
+- / → changeFrequency: 'weekly', priority: 1.0
+- /practice-areas/* → changeFrequency: 'monthly', priority: 0.9
+- /attorneys/* → changeFrequency: 'monthly', priority: 0.8
+- /cases/* → changeFrequency: 'weekly', priority: 0.7
+
+### 3d. Create /app/robots.ts
+Allow all crawlers, disallow /api/, point to sitemap URL.
+
+---
+
+## PART 4 — CONTENT PAGES (create these new pages/routes)
+
+### FAQ Hub page — /faq
+Build a full /faq page answering all Tier 3 keywords. Each question = an H2, answer = 150-250 words. Use FAQPage schema. This single page will capture most long-tail traffic.
+
+Questions to answer:
+1. How do I file a writ petition in Lahore High Court?
+2. How much do lawyers charge in Lahore?
+3. What is the process for Khula in Pakistan?
+4. How do I get bail in a criminal case in Pakistan?
+5. How do I resolve a property dispute in Punjab?
+6. Can overseas Pakistanis hire a lawyer in Lahore remotely?
+7. What is the difference between a district court and Lahore High Court case?
+8. How to register a company in Lahore?
+9. What documents are needed for a property transfer in Pakistan?
+10. How to file a constitutional petition in Lahore High Court?
+
+### Location-signal pages
+Create these only if the firm genuinely serves these areas:
+- /lahore-lawyer (landing page targeting "lawyer Lahore")
+- /punjab-lawyer (landing page targeting "advocate Punjab")
+- /lahore-high-court-advocate (landing page targeting LHC-specific queries)
+
+Each page must have: H1 with keyword, 400+ words of genuine content, embedded Google Map, office address, phone number, practice area links, CTA.
+
+### Blog/Insights — /insights
+Publish at minimum 6 articles targeting long-tail searches:
+1. "How to File a Writ Petition in Lahore High Court — Step by Step"
+2. "Property Disputes in Punjab: Your Legal Rights Explained"
+3. "Khula Process in Pakistan: What Women Need to Know"
+4. "Criminal Bail Applications in Pakistan: A Complete Guide"
+5. "Overseas Pakistanis: How to Handle Property Cases Remotely"
+6. "Company Registration in Lahore: The Legal Process Explained"
+
+Each article: 800-1200 words, H1 + H2 + H3 structure, internal links to relevant practice area pages, FAQPage schema at the bottom.
+
+---
+
+## PART 5 — TECHNICAL SEO FIXES
+
+Audit and implement the following in the codebase:
+
+### Core Web Vitals
+- All images must use next/image with explicit width, height, and priority on above-fold images
+- Add loading="lazy" on all below-fold images
+- Use next/font for all fonts (zero layout shift)
+- Minimize "use client" usage — keep as much as server components as possible
+- Check for render-blocking scripts; move to async/defer
+- Target: LCP < 2.5s, INP < 200ms, CLS < 0.1
+
+### Canonical & Duplicate Prevention
+- Add canonical tags to all pages (already set in metadata above)
+- Ensure no trailing slash duplicates — configure in next.config.ts with trailingSlash: false
+
+### Internal Linking
+- Every practice area page links to at least 3 related blog posts
+- Every blog post links back to the relevant practice area page
+- Homepage links to all practice areas and top 3 attorney profiles
+- Create a flat breadcrumb trail on all nested pages
+
+### Hreflang for Urdu
+- If /ur Urdu pages exist: add hreflang alternate links in metadata
+- Set lang="ur" and dir="rtl" on the Urdu layout
+
+### Google Business Profile signals (off-site but critical)
+Add these instructions to your README:
+1. Claim and verify rasheedandassociateslahore.me on Google Business Profile
+2. Category: "Law firm" (primary) + "Lawyer" (secondary)
+3. NAP (Name, Address, Phone) must be IDENTICAL on: website, GBP, all directories
+4. Add firm to: pakistanlawyer.com, lawzana.com, sjp.com.pk, wooqlaw.com, justdial.pk
+5. Request Google reviews from past clients using neutral language
+6. Post weekly updates on GBP (case wins, legal news, firm events)
+7. Add photos: office exterior, interior, team photos, courtroom (if allowed)
+
+---
+
+## PART 6 — AEO (Answer Engine Optimization for AI Search)
+
+AI tools like ChatGPT, Perplexity, and Google AI Overviews now refer legal clients. Optimize for them:
+
+- Structure every FAQ answer as a direct, self-contained paragraph (no "as mentioned above" references)
+- Use specific facts: years in practice, number of cases, bar registration numbers, court names
+- Add a "Key Facts" box on the homepage: founded year, number of cases, practice areas count, courts served
+- Ensure firm name "Rasheed & Associates" appears in the first 100 words of every page
+- Add a clear About section on homepage with firm entity information Google can extract
+- Publish at least one page specifically about Lahore High Court to establish topical authority
+
+---
+
+## PART 7 — IMPLEMENTATION ORDER
+
+Build in this exact sequence:
+1. /app/robots.ts + /app/sitemap.ts
+2. Root metadata in app/layout.tsx
+3. /components/seo/JsonLd.tsx with all schema types
+4. Inject LegalService + WebSite schemas on homepage
+5. Add unique metadata + FAQPage + BreadcrumbList to every existing page
+6. Add Attorney schema to each /attorneys/[slug] page
+7. Create /faq page with all 10 questions
+8. Create /lahore-lawyer, /punjab-lawyer, /lahore-high-court-advocate landing pages
+9. Scaffold /insights with 6 blog post MDX files
+10. Audit all images for next/image compliance
+11. Verify no duplicate canonical URLs
+12. Add hreflang if Urdu pages exist
+
+After implementation, provide a checklist of every file modified and a Google Search Console submission plan.
+
+Ask me before inventing any details about the firm (address, phone, founding year, attorney names, bar registration numbers) — use placeholders and mark them TODO.
+
