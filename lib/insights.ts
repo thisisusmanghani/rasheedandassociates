@@ -30,7 +30,7 @@ export const insights: Insight[] = [
     updatedAt: "2026-01-08",
     readingMinutes: 9,
     category: "Constitutional Law",
-    relatedPracticeSlugs: ["constitutional", "civil"],
+    relatedPracticeSlugs: ["constitutional"],
     keywords: ["writ petition Lahore High Court", "Article 199 petition", "how to file writ Pakistan", "LHC writ procedure"],
     intro:
       "A writ petition is the constitutional remedy of choice when an arm of the state — a federal or provincial authority, statutory body or quasi-judicial tribunal — has acted unlawfully and no equally efficacious alternate remedy is available. Under Article 199 of the Constitution of Pakistan, the Lahore High Court is empowered to issue writs in the nature of certiorari, prohibition, mandamus, habeas corpus and quo warranto. This guide explains how Rasheed & Associates files writ petitions at the LHC principal seat in Lahore.",
@@ -104,7 +104,7 @@ export const insights: Insight[] = [
     updatedAt: "2026-02-14",
     readingMinutes: 10,
     category: "Property Law",
-    relatedPracticeSlugs: ["property", "civil", "constitutional"],
+    relatedPracticeSlugs: ["property", "constitutional"],
     keywords: ["property dispute Punjab", "property lawyer Lahore", "DHA dispute", "LDA dispute", "inheritance Pakistan"],
     intro:
       "From contested mutations to encroached plots, property disputes in Punjab cut across every district court docket. The good news: the law gives owners and bona fide purchasers strong remedies — declaration, possession, partition, specific performance and stay against alienation. The challenge is procedural: getting the right relief from the right forum, fast.",
@@ -174,7 +174,7 @@ export const insights: Insight[] = [
     updatedAt: "2026-02-21",
     readingMinutes: 8,
     category: "Family Law",
-    relatedPracticeSlugs: ["family", "civil"],
+    relatedPracticeSlugs: ["family"],
     keywords: ["khula Pakistan", "khula procedure Lahore", "family lawyer Lahore", "divorce lawyer Pakistan"],
     intro:
       "Khula is the right of a Muslim wife to seek dissolution of marriage by approaching the Family Court of competent jurisdiction. The process is governed by the West Pakistan Family Courts Act, 1964 read with the Muslim Family Laws Ordinance, 1961.",
@@ -299,7 +299,7 @@ export const insights: Insight[] = [
     updatedAt: "2026-03-04",
     readingMinutes: 8,
     category: "Property Law",
-    relatedPracticeSlugs: ["property", "civil", "family"],
+    relatedPracticeSlugs: ["property", "family"],
     keywords: ["overseas Pakistani lawyer", "SPA attestation Pakistan", "remote property case Lahore", "MOFA attestation"],
     intro:
       "Overseas Pakistanis own a significant portion of urban and peri-urban property in Punjab. Distance and unauthorised transfers during absence make them vulnerable. The law provides a robust remedy: a properly attested Special Power of Attorney (SPA) allowing local counsel to file, defend and execute matters without the principal travelling to Pakistan.",
@@ -358,7 +358,7 @@ export const insights: Insight[] = [
     updatedAt: "2026-02-02",
     readingMinutes: 7,
     category: "Corporate Law",
-    relatedPracticeSlugs: ["corporate", "taxation", "ip"],
+    relatedPracticeSlugs: [],
     keywords: ["company registration Lahore", "SECP registration Pakistan", "private limited Pakistan", "SMC registration"],
     intro:
       "The Securities and Exchange Commission of Pakistan (SECP) administers company registration under the Companies Act, 2017. The entire process is now online via eServices, but each filing has substantive legal implications that benefit from corporate counsel.",

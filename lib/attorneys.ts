@@ -38,7 +38,7 @@ export const attorneys: Attorney[] = [
     ],
     barRegistration: "Enrolled Advocate, Lahore High Court — Punjab Bar Council",
     memberOf: ["Punjab Bar Council", "Lahore High Court Bar Association", "Lahore Bar Association"],
-    practiceAreas: ["criminal", "civil", "property", "family", "corporate", "constitutional", "banking", "taxation"],
+    practiceAreas: ["criminal", "property", "family", "constitutional"],
     knowsAbout: [
       "Constitutional Law",
       "Writ Petitions",

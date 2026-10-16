@@ -112,18 +112,20 @@ export default async function InsightPage({ params }: { params: Promise<Params> 
           </div>
 
           <aside className="lg:sticky lg:top-28 self-start space-y-6">
-            <div className="rounded-2xl border border-ink-800/10 bg-white p-7">
-              <p className="text-xs uppercase tracking-widest text-gold mb-4">Related practice areas</p>
-              <ul className="space-y-2 text-sm">
-                {related.map((p) => (
-                  <li key={p.slug}>
-                    <Link href={`/practice/${p.slug}`} className="text-ink-800/85 hover:text-gold transition-colors">
-                      {p.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {related.length > 0 && (
+              <div className="rounded-2xl border border-ink-800/10 bg-white p-7">
+                <p className="text-xs uppercase tracking-widest text-gold mb-4">Related practice areas</p>
+                <ul className="space-y-2 text-sm">
+                  {related.map((p) => (
+                    <li key={p.slug}>
+                      <Link href={`/practice/${p.slug}`} className="text-ink-800/85 hover:text-gold transition-colors">
+                        {p.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="rounded-2xl bg-ink-gradient p-7 text-white">
               <h3 className="font-serif text-xl">Need legal advice on this?</h3>

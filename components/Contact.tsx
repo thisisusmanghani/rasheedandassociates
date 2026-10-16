@@ -103,7 +103,7 @@ export default function Contact() {
                   className="w-full bg-ink-900/60 border border-white/10 focus:border-gold/60 outline-none text-white/90 text-sm px-4 py-3 rounded-sm transition-colors"
                 >
                   <option value="" disabled>Select an area</option>
-                  {["Civil","Criminal","Corporate","Family","Tax","Property","Other"].map((m) => (
+                  {["Criminal","Family","Property","Other"].map((m) => (
                     <option key={m} value={m}>{m}</option>
                   ))}
                 </select>

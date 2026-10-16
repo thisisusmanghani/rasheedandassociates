@@ -10,12 +10,12 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Practice Areas — Best Law Firm in Lahore | Legal Services Pakistan",
   description:
-    "Explore all practice areas of Rasheed & Associates — the best law firm in Lahore. Civil, criminal, family, property, corporate, constitutional, banking, taxation, IP and cyber law services in Lahore and across Punjab Pakistan.",
+    "Explore all practice areas of Rasheed & Associates — the best law firm in Lahore. Criminal, family, property, constitutional, narcotics, rental, FIA and cyber law services in Lahore and across Punjab Pakistan.",
   alternates: { canonical: "/practice" },
   openGraph: {
     title: "Practice Areas | Best Law Firm in Lahore — Rasheed & Associates",
     description:
-      "12 core practice areas covered by top Lahore lawyers — Lahore High Court advocacy across civil, criminal, family, property, corporate and constitutional law in Pakistan.",
+      "8 core practice areas covered by top Lahore lawyers — Lahore High Court advocacy across criminal, family, property and constitutional law in Pakistan.",
     url: `${site.url}/practice`,
   },
 };
@@ -26,7 +26,7 @@ export default function PracticeIndex() {
       <PageHero
         eyebrow="Practice Areas"
         title="Comprehensive legal counsel across every major area of Pakistani law"
-        subtitle="From bail applications and writ petitions to corporate compliance and overseas property recovery, our practice covers the full spectrum of contentious and advisory work."
+        subtitle="From bail applications and writ petitions to tenancy disputes and overseas property recovery, our practice covers the full spectrum of contentious and advisory work."
         crumbs={[{ label: "Practice", href: "/practice" }]}
       />
 

@@ -8,7 +8,7 @@ const credentials = [
   { Icon: Landmark,       label: "Adv, Lahore High Court, Lahore" },
   { Icon: GraduationCap,  label: "LL.B — University of the Punjab" },
   { Icon: Award,          label: "Decades of Courtroom Practice" },
-  { Icon: Scale,          label: "Civil · Criminal · Corporate · Family" },
+  { Icon: Scale,          label: "Criminal · Family · Property · Constitutional" },
 ];
 
 export default function Founder() {

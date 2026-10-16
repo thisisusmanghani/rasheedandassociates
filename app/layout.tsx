@@ -141,9 +141,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       { "@type": "Country", name: "Pakistan" },
     ],
     knowsAbout: [
-      "Civil Litigation", "Criminal Defence", "Property Disputes", "Family Law",
-      "Corporate Law", "Constitutional Law", "Writ Petitions", "Banking Law",
-      "Taxation Law", "Intellectual Property", "Cyber Crime / PECA",
+      "Criminal Defence", "Property Disputes", "Family Law",
+      "Constitutional Law", "Writ Petitions", "Cyber Crime / PECA",
     ],
     serviceType: [
       "Legal consultation", "Litigation", "Bail applications", "Writ petitions",

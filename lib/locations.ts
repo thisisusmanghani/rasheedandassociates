@@ -51,7 +51,7 @@ export const locations: Location[] = [
         ],
       },
     ],
-    highlightPracticeSlugs: ["criminal", "civil", "property", "family", "corporate", "constitutional"],
+    highlightPracticeSlugs: ["criminal", "property", "family", "constitutional"],
     faqs: [
       {
         q: "Where is your law office in Lahore?",
@@ -98,7 +98,7 @@ export const locations: Location[] = [
         ],
       },
     ],
-    highlightPracticeSlugs: ["constitutional", "civil", "criminal", "property", "family", "banking"],
+    highlightPracticeSlugs: ["constitutional", "criminal", "property", "family"],
     faqs: [
       {
         q: "Do you handle cases outside Lahore?",
@@ -145,7 +145,7 @@ export const locations: Location[] = [
         ],
       },
     ],
-    highlightPracticeSlugs: ["constitutional", "criminal", "civil", "banking", "taxation"],
+    highlightPracticeSlugs: ["constitutional", "criminal"],
     faqs: [
       {
         q: "Are you enrolled as an Advocate of the Lahore High Court?",
